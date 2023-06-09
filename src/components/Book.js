@@ -4,7 +4,7 @@ const Book = ({ bookProp, delbook }) => (
   <>
     <div className="book-details">
       <h4 className="genre">fiction</h4>
-      <input type="text" className="title" value={bookProp.title} />
+      <input type="text" className="title" value={bookProp.title} readOnly />
       <h4 className="author">{bookProp.author}</h4>
     </div>
     <div className="actions">
