@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { AddBook } from '../redux/books/booksSlice';
+import { addBook } from '../redux/books/booksSlice';
 
 const NewBook = () => {
   const dispatch = useDispatch();
@@ -23,7 +23,7 @@ const NewBook = () => {
       <h1>ADD NEW BOOK</h1>
       <form onSubmit={(e) => {
         e.preventDefault();
-        dispatch(AddBook(newBook));
+        dispatch(addBook(newBook));
         setNewBook({
           item_id: '',
           title: '',
