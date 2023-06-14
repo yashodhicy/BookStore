@@ -56,11 +56,11 @@ Add books and view books
 ## 🚀 Live Demo(still in development) <a name="live-demo"></a>
 
 
-- [live project](#) - upcoming 
+ - upcoming 
 
 ## 🚀 Live Video(still in development) <a name="live-video"></a>
 
-- [live video ](#) - upcoming
+- upcoming
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
