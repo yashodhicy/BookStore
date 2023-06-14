@@ -14,7 +14,7 @@ const Book = ({ bookProp }) => {
       <div className="actions">
         <ul>
           <li><button type="button">Comment</button></li>
-          <li><button type="button" onClick={() => { dispatch(RemoveBook(bookProp.id)); }}>Remove</button></li>
+          <li><button type="button" onClick={() => { dispatch(RemoveBook(bookProp.item_id)); }}>Remove</button></li>
           <li><button type="button">Edit</button></li>
         </ul>
       </div>
@@ -24,7 +24,7 @@ const Book = ({ bookProp }) => {
 
 Book.propTypes = {
   bookProp: PropTypes.shape({
-    id: PropTypes.string.isRequired,
+    item_id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
   }).isRequired,

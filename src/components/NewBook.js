@@ -5,7 +5,7 @@ import { AddBook } from '../redux/books/booksSlice';
 const NewBook = () => {
   const dispatch = useDispatch();
   const [newBook, setNewBook] = useState({
-    id: '',
+    item_id: '',
     title: '',
     author: '',
   });
@@ -25,6 +25,7 @@ const NewBook = () => {
         e.preventDefault();
         dispatch(AddBook(newBook));
         setNewBook({
+          item_id: '',
           title: '',
           author: '',
         });
