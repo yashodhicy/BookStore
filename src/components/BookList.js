@@ -7,7 +7,7 @@ const BookList = () => {
     <>
       <ul>
         { bookArray.map((bookitem) => (
-          <li key={bookitem.id}><Book bookProp={bookitem} /></li>
+          <li key={bookitem.item_id}><Book bookProp={bookitem} /></li>
         ))}
       </ul>
     </>
