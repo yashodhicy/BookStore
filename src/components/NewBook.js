@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/booksSlice';
+import { AddBook, FetchBooks } from '../redux/books/booksSlice';
 
 const NewBook = () => {
   const dispatch = useDispatch();
@@ -23,12 +23,16 @@ const NewBook = () => {
       <h1>ADD NEW BOOK</h1>
       <form onSubmit={(e) => {
         e.preventDefault();
-        dispatch(addBook(newBook));
+        dispatch(AddBook(newBook));
+
         setNewBook({
           item_id: '',
           title: '',
           author: '',
         });
+        setTimeout(() => {
+          dispatch(FetchBooks());
+        }, 1300);
       }}
       >
         <input type="text" name="title" placeholder="Book title" value={newBook.title} onChange={handleInputChange} />
