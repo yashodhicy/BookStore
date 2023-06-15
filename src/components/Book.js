@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/booksSlice';
+import { RemoveBook, FetchBooks } from '../redux/books/booksSlice';
 
-const Book = ({ bookProp }) => {
+const Book = ({ bookProp, id }) => {
   const dispatch = useDispatch();
   return (
     <>
@@ -14,7 +14,20 @@ const Book = ({ bookProp }) => {
       <div className="actions">
         <ul>
           <li><button type="button">Comment</button></li>
-          <li><button type="button" onClick={() => { dispatch(removeBook(bookProp)); }}>Remove</button></li>
+          <li>
+            <button
+              type="button"
+              onClick={() => {
+                dispatch(RemoveBook(id));
+                setTimeout(() => {
+                  dispatch(FetchBooks());
+                }, 1300);
+              }}
+            >
+              {' '}
+              Remove
+            </button>
+          </li>
           <li><button type="button">Edit</button></li>
         </ul>
       </div>
@@ -23,10 +36,13 @@ const Book = ({ bookProp }) => {
 };
 
 Book.propTypes = {
-  bookProp: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    author: PropTypes.string.isRequired,
-  }).isRequired,
+  bookProp: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      author: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
+  id: PropTypes.string.isRequired,
 };
 
 export default Book;

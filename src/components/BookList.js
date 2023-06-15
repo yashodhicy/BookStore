@@ -8,7 +8,7 @@ const BookList = () => {
 
   useEffect(() => {
     dispatch(FetchBooks());
-  }, [dispatch]);
+  }, []);
 
   const bookArray = useSelector((state) => state.books.books);
   const isLoading = useSelector((state) => state.books.isLoading);
@@ -18,7 +18,7 @@ const BookList = () => {
       {isLoading ? (<div>Loading...</div>) : (
         <ul>
           { bookArray && Object.keys(bookArray).map((bookId) => (
-            <li key={bookId}><Book bookProp={bookArray[bookId]}/></li>
+            <li key={bookId}><Book bookProp={bookArray[bookId]} id={bookId} /></li>
           ))}
         </ul>
       )}
