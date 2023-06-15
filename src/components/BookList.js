@@ -8,11 +8,10 @@ const BookList = () => {
 
   useEffect(() => {
     dispatch(FetchBooks());
-  }, []);
+  }, [dispatch]);
 
   const bookArray = useSelector((state) => state.books.books);
   const isLoading = useSelector((state) => state.books.isLoading);
-  console.log(bookArray);
   return (
     <>
       {isLoading ? (<div>Loading...</div>) : (
