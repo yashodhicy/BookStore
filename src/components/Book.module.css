@@ -9,8 +9,14 @@
   --light-blue: #4386bf;
 }
 
-.book {
+.book,
+.book-details,
+.actionsul,
+.readstate {
   display: flex;
+}
+
+.book {
   flex-direction: column;
   width: calc(100% - (6.25rem * 2));
   height: 10.625rem;
@@ -25,10 +31,6 @@
   box-shadow: rgba(60, 64, 67, 0.3) 0 1px 2px 0, rgba(60, 64, 67, 0.15) 0 2px 6px 2px;
   background-color: var(--white-three);
   border-color: var(--azure);
-}
-
-.book-details {
-  display: flex;
 }
 
 .maininfo {
@@ -66,36 +68,32 @@
   font-family: 'RobotoSlab', sans-serif;
   font-size: 0.875rem;
   font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
   color: var(--light-blue);
 }
 
 .actionsul {
-  display: flex;
   gap: 2.125rem;
   margin-top: 2rem;
 }
 
 .comment,
 .remove {
+  width: 4rem;
   padding-right: 0.938rem;
   border-right: 1px solid var(--light-blue);
 }
 
+.edit {
+  width: 4rem;
+}
+
 .action {
-  width: 3.375rem;
+  width: 5rem;
   height: 1.188rem;
   margin: 0 0.938rem 0 0;
   font-family: 'RobotoSlab', sans-serif;
   font-size: 0.875rem;
   font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
   color: var(--light-blue);
   border: none;
   background: transparent;
@@ -111,7 +109,6 @@
 /* readstate */
 
 .readstate {
-  display: flex;
   flex-grow: 1;
   align-items: center;
   justify-content: center;

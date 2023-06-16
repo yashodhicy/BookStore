@@ -30,16 +30,24 @@ li {
   padding: 0;
 }
 
+.navbar,
+.nav-menu,
+.body,
+.header,
 #root {
   display: flex;
+}
+
+#root {
   justify-content: center;
   width: 100%;
   margin: 0;
   padding: 0;
 }
 
+
 .body {
-  display: flex;
+
   flex-direction: column;
   width: 99.7%;
   margin: 0;
@@ -49,7 +57,6 @@ li {
 
 header {
   width: calc(100% - (6.25rem * 2));
-  display: flex;
   justify-content: space-between;
   margin: 0;
   margin-bottom: 2rem;
@@ -60,12 +67,7 @@ header {
   align-items: center;
 }
 
-.navbar {
-  display: flex;
-}
-
 .nav-menu {
-  display: flex;
   gap: 2.563rem;
   list-style: none;
   margin: 0.8rem 0 0.8rem 0;
