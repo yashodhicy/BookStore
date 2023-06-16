@@ -63,6 +63,7 @@ function Book({ bookProp, id }) {
           <p className={styles.chaptitle}>CURRENT CHAPTER</p>
           <p>
             Chapter
+            {' '}
             {randomNumber}
           </p>
           <button type="button" className={styles.update}>UPDATE PROGRESS</button>
