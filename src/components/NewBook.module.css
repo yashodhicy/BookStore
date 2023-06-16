@@ -1,0 +1,54 @@
+.add-book {
+  width: calc(100% - (6.25rem * 2));
+  margin: 0 6.25rem 2rem 6.25rem;
+  padding: 0;
+}
+
+.newbookh1 {
+  width: 10.875rem;
+  height: 1.5rem;
+  margin: 1.813rem 32.75rem 1.188rem 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  letter-spacing: -0.18px;
+  color: #888;
+}
+
+input {
+  border-radius: 4px;
+  border: 1px solid var(--white-three);
+  background-color: var(--white-two);
+  font-size: 1rem;
+  letter-spacing: 0.15px;
+  height: 2.813rem;
+}
+
+input::placeholder {
+  margin-left: 1rem;
+}
+
+input:focus,
+input:hover {
+  border-color: var(--azure);
+}
+
+.newbooktitle {
+  width: 45%;
+  margin-right: 2rem;
+}
+
+.newbookauthor {
+  width: 25%;
+}
+
+.submit {
+  width: 20%;
+  height: 2.813rem;
+  margin: 1.188rem 0 0 2.5rem;
+  padding: 0.801rem 1.188rem 0.886rem 1.375rem;
+  border-radius: 3px;
+  background-color: var(--azure);
+  border: none;
+  color: var(--white);
+}

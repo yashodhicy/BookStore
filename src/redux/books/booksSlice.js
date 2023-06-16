@@ -35,7 +35,7 @@ export const AddBook = createAsyncThunk(
       item_id: uuidv4(),
       title: newBook.title,
       author: newBook.author,
-      category: 'fiction',
+      category: 'Fiction',
     };
     try {
       const resp = await axios.post(url, book);
