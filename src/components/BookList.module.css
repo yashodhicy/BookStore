@@ -1,0 +1,10 @@
+:root {
+  --white-three: #e8e8e8;
+}
+
+.booklist {
+  display: grid;
+  gap: 0.938rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--white-three);
+}

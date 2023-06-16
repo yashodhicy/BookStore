@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { AddBook, FetchBooks } from '../redux/books/booksSlice';
+import styles from './NewBook.module.css';
 
 const NewBook = () => {
   const dispatch = useDispatch();
@@ -19,8 +20,8 @@ const NewBook = () => {
   };
 
   return (
-    <div className="add-book">
-      <h1>ADD NEW BOOK</h1>
+    <div className={styles['add-book']}>
+      <h1 className={styles.newbookh1}>ADD NEW BOOK</h1>
       <form onSubmit={(e) => {
         e.preventDefault();
         dispatch(AddBook(newBook));
@@ -35,9 +36,9 @@ const NewBook = () => {
         }, 1300);
       }}
       >
-        <input type="text" name="title" placeholder="Book title" value={newBook.title} onChange={handleInputChange} />
-        <input type="text" name="author" placeholder="Book author" value={newBook.author} onChange={handleInputChange} />
-        <button type="submit">ADD BOOK</button>
+        <input className={styles.newbooktitle} type="text" name="title" placeholder="Book title" value={newBook.title} onChange={handleInputChange} />
+        <input className={styles.newbookauthor} type="text" name="author" placeholder="Book author" value={newBook.author} onChange={handleInputChange} />
+        <button className={styles.submit} type="submit">ADD BOOK</button>
       </form>
     </div>
   );
